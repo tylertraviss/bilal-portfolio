@@ -44,10 +44,6 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-academic">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
             </div>
             <p className="text-sm text-muted-foreground">
               Department of Math,<br />
