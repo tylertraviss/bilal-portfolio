@@ -34,6 +34,10 @@
     --ring: 221.2 83% 53.3%;
 
     --radius: 0.5rem;
+    
+    --academic: 220 100% 40%;
+    --academic-accent: 240 100% 40%;
+    --academic-light: 220 100% 90%;
   }
 
   .dark {

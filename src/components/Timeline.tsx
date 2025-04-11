@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Briefcase, GraduationCap, MapPin } from "lucide-react";
+import { BookOpen, Briefcase, GraduationCap, MapPin, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TimelineItem {
@@ -11,60 +11,70 @@ interface TimelineItem {
   location: string;
   period: string;
   description: string;
-  type: "education" | "experience";
+  type: "education" | "experience" | "award";
   highlights?: string[];
 }
 
 const timelineItems: TimelineItem[] = [
   {
     id: 1,
-    title: "Ph.D. in Computer Science",
-    organization: "Stanford University",
-    location: "Stanford, CA",
-    period: "2015 - 2019",
-    description: "Dissertation on Quantum Computing Applications in Machine Learning. Received the Outstanding Dissertation Award.",
+    title: "Master of Science in Mathematics",
+    organization: "University of Toronto",
+    location: "Toronto, ON",
+    period: "2024 - Present",
+    description: "Currently pursuing graduate studies in Mathematics.",
     type: "education",
-    highlights: ["Quantum Computing", "Machine Learning", "Computational Theory"]
+    highlights: ["Mathematics", "Research", "Graduate Studies"]
   },
   {
     id: 2,
-    title: "Senior Research Scientist",
-    organization: "Advanced Research Institute",
-    location: "Palo Alto, CA",
-    period: "2019 - Present",
-    description: "Leading research initiatives on quantum algorithms and machine learning applications for complex systems.",
-    type: "experience",
-    highlights: ["Research Leadership", "Quantum Algorithms", "Publication"]
+    title: "Bachelor of Science in Mathematics",
+    organization: "University of New Brunswick",
+    location: "Fredericton, NB",
+    period: "2020 - 2024",
+    description: "First Class Honours with a cumulative GPA of 4.3/4.3",
+    type: "education",
+    highlights: ["Mathematics", "First Class Honours", "Research"]
   },
   {
     id: 3,
-    title: "M.S. in Computational Physics",
-    organization: "MIT",
-    location: "Cambridge, MA",
-    period: "2013 - 2015",
-    description: "Specialized in computational methods for quantum systems with a focus on simulation techniques.",
-    type: "education",
-    highlights: ["Quantum Systems", "Simulation", "Computational Methods"]
+    title: "Scientific Machine Learning for Weather Prediction",
+    organization: "UNB, ECCC, Nvidia Corp.",
+    location: "Fredericton, NB",
+    period: "May 2024 - Aug. 2024",
+    description: "Research on weather prediction using Nvidia's CorrDiff model in collaboration with Environment and Climate Change Canada.",
+    type: "experience",
+    highlights: ["Machine Learning", "Weather Prediction", "Research"]
   },
   {
     id: 4,
-    title: "Research Assistant",
-    organization: "National Laboratory for Quantum Technologies",
-    location: "Berkeley, CA",
-    period: "2015 - 2019",
-    description: "Contributed to research on quantum computing hardware and software interfaces during Ph.D. studies.",
+    title: "Teaching Assistant - Introduction to Numerical Methods",
+    organization: "University of New Brunswick",
+    location: "Fredericton, NB",
+    period: "Sept. 2023 - Dec. 2023",
+    description: "Assisted in teaching MATH3413: Introduction to Numerical Methods",
     type: "experience",
-    highlights: ["Hardware-Software Interface", "Quantum Computing", "Research"]
+    highlights: ["Teaching", "Numerical Methods", "Mathematics"]
   },
   {
     id: 5,
-    title: "B.S. in Physics",
-    organization: "California Institute of Technology",
-    location: "Pasadena, CA",
-    period: "2009 - 2013",
-    description: "Graduated with honors. Senior thesis on computational approaches to many-body quantum systems.",
-    type: "education",
-    highlights: ["Quantum Physics", "Computational Approaches", "Honors Graduate"]
+    title: "NSERC Undergraduate Student Research Award",
+    organization: "Natural Sciences and Engineering Research Council of Canada (NSERC)",
+    location: "Canada",
+    period: "2022, 2023, 2024",
+    description: "Received prestigious research funding for undergraduate research excellence",
+    type: "award",
+    highlights: ["Research Funding", "Academic Excellence", "National Recognition"]
+  },
+  {
+    id: 6,
+    title: "Lieutenant Governor of NB Silver Medal - Science",
+    organization: "University of New Brunswick",
+    location: "Fredericton, NB",
+    period: "2023-24",
+    description: "Awarded to the most outstanding graduating student in the Faculty of Science",
+    type: "award",
+    highlights: ["Academic Excellence", "Leadership", "Science"]
   }
 ];
 
@@ -73,9 +83,9 @@ const Timeline = () => {
     <section id="education" className="bg-academic-light/30 py-16">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center text-center mb-12">
-          <h2 className="section-title">Education & Experience</h2>
+          <h2 className="section-title">Education, Experience & Awards</h2>
           <p className="section-subtitle">
-            Academic background and professional research experience
+            Academic background, research experience, and recognition
           </p>
         </div>
         
@@ -102,6 +112,8 @@ const Timeline = () => {
                       <div className="flex items-center mb-2">
                         {item.type === "education" ? (
                           <GraduationCap className="h-5 w-5 text-academic mr-2" />
+                        ) : item.type === "award" ? (
+                          <Award className="h-5 w-5 text-academic mr-2" />
                         ) : (
                           <Briefcase className="h-5 w-5 text-academic mr-2" />
                         )}
@@ -113,6 +125,8 @@ const Timeline = () => {
                       <CardDescription className="flex items-center">
                         {item.type === "education" ? (
                           <BookOpen className="h-4 w-4 mr-2" />
+                        ) : item.type === "award" ? (
+                          <Award className="h-4 w-4 mr-2" />
                         ) : (
                           <Briefcase className="h-4 w-4 mr-2" />
                         )}

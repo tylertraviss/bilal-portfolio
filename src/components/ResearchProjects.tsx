@@ -9,36 +9,41 @@ interface Project {
   description: string;
   tags: string[];
   date: string;
+  organization: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: "Quantum Computing Applications in Machine Learning",
-    description: "Exploring how quantum algorithms can enhance neural network training and performance on complex datasets.",
-    tags: ["Quantum Computing", "Machine Learning", "Neural Networks"],
-    date: "2022 - Present"
+    title: "Scientific Machine Learning for Weather Prediction",
+    description: "Ran simulations using Nvidia's CorrDiff model, applying generative downscaling to convert global forecast data into high-resolution weather predictions for various weather variables during a typhoon event in Taiwan.",
+    tags: ["Machine Learning", "Weather Prediction", "Generative Models"],
+    date: "May 2024 - Aug. 2024",
+    organization: "UNB, ECCC, Nvidia Corp."
   },
   {
     id: 2,
-    title: "Computational Models for Climate Data Analysis",
-    description: "Developing advanced statistical models to analyze and predict climate patterns using satellite imagery.",
-    tags: ["Climate Science", "Data Analysis", "Statistics"],
-    date: "2020 - 2022"
+    title: "Estimating Hand Kinematics from Neural Signals",
+    description: "Performed electromyogram (EMG) signal processing and feature extraction to continuously estimate hand joint kinematics from forearm EMG signals, with a focus on comparing Kalman filter performance using various preprocessing methods.",
+    tags: ["Signal Processing", "Biomedical Engineering", "Kalman Filtering"],
+    date: "May 2023 - Dec. 2023",
+    organization: "UNB Institute of Biomedical Engineering"
   },
   {
     id: 3,
-    title: "Optimization Algorithms for Large-Scale Systems",
-    description: "Creating novel optimization approaches for solving complex systems with millions of variables and constraints.",
-    tags: ["Optimization", "Algorithms", "Systems Engineering"],
-    date: "2019 - 2021"
+    title: "Wave Propagation on Black Holes",
+    description: "Reproduced known results for wave propagation on Schwarzschild spacetime and implemented various numerical methods for solving wave propagation PDEs in Julia, generalizing to dynamical, non-singular black hole spacetimes.",
+    tags: ["Computational Physics", "PDEs", "Julia"],
+    date: "May 2023 - Aug. 2023",
+    organization: "University of New Brunswick"
   },
   {
     id: 4,
-    title: "Ethical Implications of AI in Research Contexts",
-    description: "Studying the ethical considerations and implications of deploying AI systems in sensitive research domains.",
-    tags: ["AI Ethics", "Research Methods", "Policy"],
-    date: "2018 - 2020"
+    title: "Mathematical Disease Spread Analysis",
+    description: "Developed network models from agent-based disease propagation simulations and applied maximum likelihood parameter estimation to fit ODE disease models to empirical data, using Bayesian MCMC methods for parameter estimation.",
+    tags: ["Mathematical Modeling", "Network Analysis", "Bayesian Statistics"],
+    date: "May 2022 - Aug. 2022",
+    organization: "University of New Brunswick, Black Arcs Inc."
   }
 ];
 
@@ -49,7 +54,7 @@ const ResearchProjects = () => {
         <div className="flex flex-col items-center justify-center text-center mb-12">
           <h2 className="section-title">Research Projects</h2>
           <p className="section-subtitle">
-            Exploring cutting-edge problems at the intersection of computer science, physics, and data analysis
+            Exploring complex problems at the intersection of mathematics, computational modeling, and data analysis
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
@@ -57,7 +62,7 @@ const ResearchProjects = () => {
             <Card key={project.id} className="card-hover">
               <CardHeader>
                 <CardTitle className="text-xl text-academic">{project.title}</CardTitle>
-                <CardDescription>{project.date}</CardDescription>
+                <CardDescription>{project.date} | {project.organization}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{project.description}</p>

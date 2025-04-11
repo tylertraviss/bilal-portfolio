@@ -10,16 +10,16 @@ const Hero = () => {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                <span className="gradient-text">Dr. Alex Morgan</span>
+                <span className="gradient-text">Bilal Saleh Husain</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Computational Research Scientist
+                Mathematics Research Student
               </p>
             </div>
             <div className="max-w-[700px] text-muted-foreground md:text-xl">
               <p>
-                Exploring the intersection of machine learning and quantum physics to solve complex systems 
-                challenges. Based at Stanford University with 10+ years of research experience.
+                Exploring the intersection of mathematics, machine learning, and computational modeling 
+                to solve complex systems challenges. Currently pursuing a Master's in Mathematics at the University of Toronto.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="flex items-center justify-center">
             <div className="relative aspect-square overflow-hidden rounded-full border-8 border-opacity-10 border-academic w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-100 to-blue-50 flex items-center justify-center text-academic font-bold text-6xl">
-                AM
+                BSH
               </div>
             </div>
           </div>

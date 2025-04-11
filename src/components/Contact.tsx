@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { AtSign, Github, Linkedin, Mail, MapPin, MessageSquare, Phone, Send, Twitter } from "lucide-react";
+import { AtSign, Github, Linkedin, Mail, MapPin, MessageSquare, Phone, Send, Music, Trophy } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -27,15 +27,11 @@ const Contact = () => {
             <CardContent className="space-y-4">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-academic mr-3" />
-                <span>alex.morgan@example.edu</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-5 w-5 text-academic mr-3" />
-                <span>+1 (650) 123-4567</span>
+                <span>bilal.husain@mail.utoronto.ca</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-academic mr-3" />
-                <span>Department of Computer Science, Stanford University, CA</span>
+                <span>Department of Mathematics, University of Toronto, ON</span>
               </div>
               
               <div className="pt-4 border-t">
@@ -53,10 +49,20 @@ const Contact = () => {
                     <Linkedin className="mr-2 h-4 w-4" />
                     LinkedIn
                   </Button>
-                  <Button variant="outline" size="sm" className="flex items-center">
-                    <Twitter className="mr-2 h-4 w-4" />
-                    Twitter
-                  </Button>
+                </div>
+              </div>
+              
+              <div className="pt-4 border-t">
+                <CardTitle className="text-base mb-3">Other Interests</CardTitle>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary" className="bg-academic/10 text-academic">
+                    <Trophy className="mr-2 h-3 w-3" />
+                    UNB Varsity Tennis
+                  </Badge>
+                  <Badge variant="secondary" className="bg-academic/10 text-academic">
+                    <Music className="mr-2 h-3 w-3" />
+                    Piano (Royal Conservatory, Level 9)
+                  </Badge>
                 </div>
               </div>
             </CardContent>
