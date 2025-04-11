@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Briefcase, GraduationCap, MapPin, Award } from "lucide-react";
+import { BookOpen, GraduationCap, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TimelineItem {
@@ -11,7 +11,7 @@ interface TimelineItem {
   location: string;
   period: string;
   description: string;
-  type: "education" | "experience" | "award";
+  type: "education";
   highlights?: string[];
 }
 
@@ -35,46 +35,6 @@ const timelineItems: TimelineItem[] = [
     description: "First Class Honours with a cumulative GPA of 4.3/4.3",
     type: "education",
     highlights: ["Mathematics", "First Class Honours", "Research"]
-  },
-  {
-    id: 3,
-    title: "Scientific Machine Learning for Weather Prediction",
-    organization: "UNB, ECCC, Nvidia Corp.",
-    location: "Fredericton, NB",
-    period: "May 2024 - Aug. 2024",
-    description: "Research on weather prediction using Nvidia's CorrDiff model in collaboration with Environment and Climate Change Canada.",
-    type: "experience",
-    highlights: ["Machine Learning", "Weather Prediction", "Research"]
-  },
-  {
-    id: 4,
-    title: "Teaching Assistant - Introduction to Numerical Methods",
-    organization: "University of New Brunswick",
-    location: "Fredericton, NB",
-    period: "Sept. 2023 - Dec. 2023",
-    description: "Assisted in teaching MATH3413: Introduction to Numerical Methods",
-    type: "experience",
-    highlights: ["Teaching", "Numerical Methods", "Mathematics"]
-  },
-  {
-    id: 5,
-    title: "NSERC Undergraduate Student Research Award",
-    organization: "Natural Sciences and Engineering Research Council of Canada (NSERC)",
-    location: "Canada",
-    period: "2022, 2023, 2024",
-    description: "Received prestigious research funding for undergraduate research excellence",
-    type: "award",
-    highlights: ["Research Funding", "Academic Excellence", "National Recognition"]
-  },
-  {
-    id: 6,
-    title: "Lieutenant Governor of NB Silver Medal - Science",
-    organization: "University of New Brunswick",
-    location: "Fredericton, NB",
-    period: "2023-24",
-    description: "Awarded to the most outstanding graduating student in the Faculty of Science",
-    type: "award",
-    highlights: ["Academic Excellence", "Leadership", "Science"]
   }
 ];
 
@@ -83,9 +43,9 @@ const Timeline = () => {
     <section id="education" className="bg-academic-light/30 py-16">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center text-center mb-12">
-          <h2 className="section-title">Education, Experience & Awards</h2>
+          <h2 className="section-title">Education</h2>
           <p className="section-subtitle">
-            Academic background, research experience, and recognition
+            Academic background
           </p>
         </div>
         
@@ -110,26 +70,14 @@ const Timeline = () => {
                   <Card>
                     <CardHeader>
                       <div className="flex items-center mb-2">
-                        {item.type === "education" ? (
-                          <GraduationCap className="h-5 w-5 text-academic mr-2" />
-                        ) : item.type === "award" ? (
-                          <Award className="h-5 w-5 text-academic mr-2" />
-                        ) : (
-                          <Briefcase className="h-5 w-5 text-academic mr-2" />
-                        )}
+                        <GraduationCap className="h-5 w-5 text-academic mr-2" />
                         <Badge variant="outline" className="bg-academic text-white">
                           {item.period}
                         </Badge>
                       </div>
                       <CardTitle className="text-xl text-academic">{item.title}</CardTitle>
                       <CardDescription className="flex items-center">
-                        {item.type === "education" ? (
-                          <BookOpen className="h-4 w-4 mr-2" />
-                        ) : item.type === "award" ? (
-                          <Award className="h-4 w-4 mr-2" />
-                        ) : (
-                          <Briefcase className="h-4 w-4 mr-2" />
-                        )}
+                        <BookOpen className="h-4 w-4 mr-2" />
                         {item.organization}
                         <span className="mx-2">•</span>
                         <MapPin className="h-4 w-4 mr-1" />
