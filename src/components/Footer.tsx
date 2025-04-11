@@ -7,14 +7,7 @@ const Footer = () => {
   return (
     <footer className="border-t py-8 bg-secondary/40">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Dr. Alex Morgan</h3>
-            <p className="text-sm text-muted-foreground">
-              Computational Research Scientist focused on quantum computing and machine learning applications.
-            </p>
-          </div>
-          
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
@@ -32,24 +25,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#contact" className="text-muted-foreground hover:text-academic">Contact</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-academic">Research Blog</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-academic">Download CV</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-academic">Conference Talks</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-academic">Teaching Materials</a>
               </li>
             </ul>
           </div>
@@ -83,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Dr. Alex Morgan. All rights reserved.</p>
+          <p>© {currentYear}. All rights reserved.</p>
         </div>
       </div>
     </footer>
