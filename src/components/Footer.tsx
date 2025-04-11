@@ -50,9 +50,9 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              Department of Computer Science,<br />
-              Stanford University,<br />
-              California, USA
+              Department of Math,<br />
+              University of Toronto,<br />
+              Toronto, ON, Canada
             </p>
           </div>
         </div>
