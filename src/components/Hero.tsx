@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { BookOpen, Download, MessageSquare } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -39,9 +40,11 @@ const Hero = () => {
           </div>
           <div className="flex items-center justify-center">
             <div className="relative aspect-square overflow-hidden rounded-full border-8 border-opacity-10 border-academic w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-100 to-blue-50 flex items-center justify-center text-academic font-bold text-6xl">
-                BSH
-              </div>
+              <img 
+                src="/lovable-uploads/82b86515-258e-460d-b300-78cdcdfa238e.png" 
+                alt="Bilal Saleh Husain"
+                className="w-full h-full object-cover" 
+              />
             </div>
           </div>
         </div>
